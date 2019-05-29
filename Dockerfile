@@ -4,6 +4,7 @@ ENV CHROMEDRIVER_VERSION 2.46
 
 # Allow https sources
 RUN apt-get update && apt-get install -y apt-transport-https
+RUN apt-get update && apt-get install -y --no-install-recommends apt-utils
 
 # Install Chrome and xvfb
 RUN apt-get update \
