@@ -4,10 +4,10 @@ ENV CHROMEDRIVER_VERSION 2.46
 
 # Allow https sources
 RUN apt-get update && apt-get install -y apt-transport-https
-RUN apt-get update && apt-get install -y --no-install-recommends apt-utils
 
 # Install Chrome and xvfb
 RUN apt-get update \
+&& apt-get install -y --no-install-recommends apt-utils
 && apt-get install -y libxss1 libappindicator3-1 libindicator7 fonts-liberation lsb-release xdg-utils xvfb \
 && wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb \
 && dpkg -i google-chrome*.deb \
