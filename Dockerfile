@@ -3,7 +3,7 @@ FROM openjdk:8-jdk
 ENV CHROMEDRIVER_VERSION 2.43
 
 # Allow https sources
-RUN apt-get update && apt-get install -y --no-install-recommends apt-utils apt-transport-https
+RUN apt-get update && apt-get install -y apt-transport-https ca-certificates
 
 # Install Chrome and xvfb
 RUN apt-get update \
